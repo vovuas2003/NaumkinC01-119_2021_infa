@@ -26,7 +26,16 @@ def number8():
         print(index,a[index])
     return 0
 def number9():
-    a = np.random.randint(1,9,10)
-    su = math.sqrt(sum(i**2 for i in a))
-    a = np.array([i/su for i in a])
+    a=np.random.randint(1,9,10)
+    su=math.sqrt(sum(i**2 for i in a))
+    a=np.array([i/su for i in a])
     return a
+def number10():
+    x=float(input())
+    x_=np.random.randint(-10,9,10)
+    z=min([abs(i-x) for i in x_])
+    print(x_)
+    if z+x in x_:
+        return z+x
+    else:
+        return x-z
