@@ -3,18 +3,26 @@ import numpy as np
 def number1():
     return np.arange(12,43)
 def number2():
-    return np.array([3 if i==5 else 0 for i in range(12)])
+    a=np.zeros(12)
+    a[4]=1
+    return a
 def number3():
-    return np.array([i for i in range(9)]).reshape(3,3)
+    a=np.arange(0,9,1).reshape(3, 3)
+    return a
 def number4():
-    return np.array([i for i in np.array([1,2,0,0,4,0]) if i>0])
+    a=np.array([1,2,0,0,4,0])
+    a=a[a>0]
+    return a
 def number5():
     a1=np.arange(15).reshape(5,3)
     a2=np.arange(1,12,2).reshape(3,2)
     return np.dot(a1,a2)
 def number6():
-    a=np.zeros((10,10))
-    a[1:-1,1:-1]=1
+    a=np.zeros(10*10).reshape(10,10)
+    a[:,0]=1
+    a[:,9]=1
+    a[0,:]=1
+    a[9,:]=1
     return  a
 def number7():
     return sorted(np.random.randint(1,9,10))
