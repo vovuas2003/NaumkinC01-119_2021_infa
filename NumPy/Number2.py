@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 def func1d(a):
-  return(a * weights)
+    return(a * weights)
 img = cv2.imread("pick.jpg")
 print(img.shape)
 weights = np.array([0.299, 0.587, 0.114])
